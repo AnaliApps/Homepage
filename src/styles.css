@@ -1,7 +1,9 @@
 @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900,1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: "Roboto","Playfair Display";
 }
@@ -14,17 +16,66 @@ header{
     list-style-type: none;
     margin: 0 5px;
 }
-.bio-h1,.footer_header{
+.bio-h1,.footer_header,h1{
     text-align: center;
 }
 footer{
     display: flex;
     gap: 10px;
 }
-
+.card{
+    width: 40vw;
+    align-items: center;
+}
+.main_content{
+    max-width: 85vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.git_links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+.git_links>li,.footer_links>li{
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color:black;
+    opacity:0.4;
+    transition: opacity 1s ease-in-out;
+}
+a:hover{
+    opacity:1;
+}
+.footer_links{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#description{
+    text-align:center;
+}
 @media (max-width:800px){
-    header,footer{
+    header,footer,.main_content{
         display: flex;
         flex-direction: column;
+    }
+    .main_content{
+        max-width: 60vw;
+        margin: 5px;
+        padding: 5px;
+    }
+    .card{
+        width: 100%;
+        align-items: center;
+       
+    }
+    h2{
+        text-align: center;
     }
 }

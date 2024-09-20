@@ -13,7 +13,7 @@ export default function createFooter(){
                 <p>Random Town, California 12345</p>
                 <p>555-555-555</p>
                 <p>notreal@gmail.com</p>
-                <ul>
+                <ul class="footer_links">
                 <li>
                 <i class="devicon-github-original"></i>
                 </li>
