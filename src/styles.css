@@ -24,7 +24,7 @@ footer{
     gap: 10px;
 }
 .card{
-    width: 40vw;
+    width: 35vw;
     align-items: center;
 }
 .main_content{
@@ -60,6 +60,24 @@ a:hover{
 #description{
     text-align:center;
 }
+.main_img{
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+}
+.header_img,.footer_img{
+    width: 50vw;
+    height: 100%;
+    object-fit: fill;
+}
+.blur_load{
+    background: url('./views/images/icon-small.jpg');
+    width: 50vw;
+    filter: blur(10px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 @media (max-width:800px){
     header,footer,.main_content{
         display: flex;
@@ -77,5 +95,12 @@ a:hover{
     }
     h2{
         text-align: center;
+    }
+    .blur_load{
+        width: 100vw;
+    }
+    .header_img,.footer_img,.main_img{
+        width: 100vw;
+        height: 100%;
     }
 }
