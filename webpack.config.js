@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
     entry:{
@@ -11,6 +12,9 @@ module.exports = {
             inject:true,
             chunks:["bundle"],
             filename:"index.html"
+        }),
+        new CompressionPlugin({
+            algorithm:"gzip"
         }),
     ],
     output:{
@@ -25,9 +29,13 @@ module.exports = {
                 use:['style-loader','css-loader'],
             },
             {
-                test:/\.(png|svg|jpg|jpeg|gif)$/i,
+                test:/\.(png|svg|jpg|jpeg|gif|webp)$/i,
                 type:'asset/resource',
             },
         ],
+    },
+    mode: 'development',
+    optimization:{
+        usedExports:true,
     },
 };

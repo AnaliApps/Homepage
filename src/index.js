@@ -7,6 +7,7 @@ document.body.appendChild(mainContent())
 document.body.appendChild(createFooter())
 
 const imgDiv = document.querySelectorAll(".blur_load")
+const allMainDiv = document.querySelectorAll(".main_blur_load")
 let load = 0;
 let loadInt = setInterval(blurring,30)
 
@@ -18,5 +19,7 @@ function blurring(){
     imgDiv.forEach(item => { 
         item.style.filter = `blur(${load,0,100,30,0}px)`
     })
-    
+    allMainDiv.forEach(item=>{
+        item.style.filter = `blur(${load,0,100,30,0}px)`
+    })
 }
