@@ -5,7 +5,7 @@ export default function headerContent(){
     let header = document.createElement('header');
     header.innerHTML = `
     <div class="blur_load">
-        <img class="header_img" width="320px" height="320px" src=${icon_640} srcset="${icon_640} 640w,${icon_1280} 1280w,${icon_1920} 1920w" alt="Anali Rono" sizes="(max-width:800px) 100vw, 50vw"fetchpriority="high" rel="preload">
+        <img class="header_img" width="320px" height="320px" src=${icon_640} srcset="${icon_640} 640w,${icon_1280} 1280w,${icon_1920} 1920w" alt="Anali Rono" sizes="(max-width:800px) 100vw, 50vw" fetchpriority="high" rel="preload">
     </div>
     <div class="bio">
         <div>
